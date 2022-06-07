@@ -15,16 +15,16 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: black;
 }
 
 body {
   margin: 0px;
-  background-color: #cfdee7;
+  background-color: #bb9457;
 }
 
 .navbar {
-  background-color: #647aa3;
+  background-color: #432818;
   box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
@@ -39,7 +39,7 @@ nav {
     padding: 15px;
 
     &.router-link-exact-active {
-      color: #334195;
+      color: #ffa400;
     }
   }
 }

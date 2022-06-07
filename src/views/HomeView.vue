@@ -1,12 +1,12 @@
 <template>
   <div class="home">
-    <ul>
+    <ul v-if="showBooks">
       <li v-for="book in books" :key="book">
         <h2>{{ book.title }}</h2>
         <p>{{ book.author }}</p>
       </li>
     </ul>
-    <button @click="changeTitle('Dune')">Button</button>
+    <button @click="toggleBooks">Toggle Books</button>
   </div>
 </template>
 
@@ -21,6 +21,7 @@ import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
 
   data() {
     return {
+      showBooks: true,
       books: [
         { title: "The Final Empire", author: "Author 1" },
         { title: "Dune", author: "Author 2" },
@@ -29,10 +30,16 @@ import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
     };
   },
   methods: {
-    /*changeTitle(x: number) {
-      this.books[x] = books[x];
-    },*/
+    toggleBooks() {
+      this.showBooks = !this.showBooks;
+    },
   },
 })
 export default class HomeView extends Vue {}
 </script>
+
+<style scoped>
+.home {
+  align-items: left;
+}
+</style>

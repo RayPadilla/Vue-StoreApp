@@ -1,6 +1,6 @@
 <template>
   <div class="store">
-    <h1>Store Page</h1>
+    <h1>Books</h1>
     <StoreItem />
   </div>
 </template>
@@ -16,3 +16,9 @@ import StoreItem from "@/components/StoreItem.vue";
 })
 export default class StoreView extends Vue {}
 </script>
+
+<style scoped>
+h1 {
+  font-family: "Papyrus";
+}
+</style>
